@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Dash Community</title>
+    <style>
+        :root {
+            --gd-blue: #0074FF;
+            --gd-green: #7fdb22;
+            --gd-purple: #BF00FF;
+      		--gd-yellow: #FFFF00;
+            --gd-dark: #1a1a1a;
+            --gd-panel: #53ac12;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #0054a6 0%, #002e5a 100%);
+            background-attachment: fixed;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            text-shadow: 3px 3px 0px #000;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 2px;
+            color: #fff;
+            border: 4px solid #fff;
+            padding: 10px 20px;
+            background: var(--gd-panel);
+            box-shadow: 8px 8px 0px rgba(0,0,0,0.5);
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            width: 90%;
+            padding: 20px;
+        }
+
+        .card {
+           background: linear-gradient(to bottom, var(--gd-green), var(--gd-panel));
+    
+    /* Double Border: 
+       1st: 3px Black inner 
+       2nd: 6px White outer (shows as 3px because it sits behind the black) */
+    box-shadow: 
+        0 0 0 3px #000, 
+        0 0 0 6px #fff,
+        8px 8px 0px rgba(0,0,0,0.5); /* The GD-style drop shadow */
+
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.1s;
+    border: none; /* Removing the old single border */
+    margin: 10px; /* Essential so the white stroke doesn't touch other cards */
+        }
+
+        .card:hover {
+           transform: scale(1.03);
+    /* Adds a glow behind the white border */
+    box-shadow: 
+        0 0 0 3px #000, 
+        0 0 0 6px #fff,
+        0 0 20px rgba(255, 255, 255, 0.4);
+        }
+
+      .robtop {
+            background: linear-gradient(to bottom, var(--gd-blue), var(--gd-yellow));
+           /* Double Border: 
+       1st: 3px Black inner 
+       2nd: 6px White outer (shows as 3px because it sits behind the black) */
+    box-shadow: 
+        0 0 0 3px #000, 
+        0 0 0 6px #fff,
+        8px 8px 0px rgba(0,0,0,0.5); /* The GD-style drop shadow */
+
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.1s;
+    border: none; /* Removing the old single border */
+    margin: 10px; /* Essential so the white stroke doesn't touch other cards */
+        }
+
+        .robtop:hover {
+           transform: scale(1.03);
+    /* Adds a glow behind the white border */
+    box-shadow: 
+        0 0 0 3px #000, 
+        0 0 0 6px #fff,
+        0 0 20px rgba(255, 255, 255, 0.4);
+        }
+      
+        .btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--gd-blue);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            border-bottom: 4px solid #004aab;
+        }
+
+        .btn:active {
+            transform: translateY(2px);
+            border-bottom-width: 2px;
+        }
+
+        .btn-steam { background: #1b2838; border-bottom-color: #000; }
+        .btn-demon { background: #e63946; border-bottom-color: #9d1b26; }
+        .btn-colon { background: #fa5c00; border-bottom-color: #b34200; }
+
+        footer {
+            margin-top: auto;
+            padding: 20px;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+    <img src="https://image2url.com/r2/default/images/1771006744708-bed88f7c-195a-436e-baf2-1a76a3ce66f9.png" alt="Geometry Dash Community" style="width: 600px; max-width: 90%;">
+    <p>Everything Geometry Dash.</p>
+    <p>HUGE CREDITS TO GD COLON FOR MAKING LIKE 80% OF THE WEBSITES ON HERE.</p>
+</header>
+
+    <div class="container">
+       <div class="card">
+            <h3>GDColon Website</h3>
+            <p>More cool websites made by the furry. (Just Joking.)</p>
+            <a href="https://gdcolon.com" target="_blank" class="btn btn-colon">Browse GDColon</a>
+        </div>
+      
+      <div class="card">
+            <h3>The Demon List</h3>
+            <p>Track the hardest rated levels in the game.</p>
+            <a href="https://pointercrate.com" target="_blank" class="btn btn-demon">View Pointercrate</a>
+        </div>
+
+        <div class="card">
+            <h3>Get the Game</h3>
+            <p>Download the full version of GD on Steam.</p>
+            <a href="https://store.steampowered.com/app/322170/Geometry_Dash" target="_blank" class="btn btn-steam">Steam Store</a>
+        </div>
+
+        <div class="card">
+            <h3>GD Wiki</h3>
+            <p>Learn about icons, levels, and game mechanics.</p>
+            <a href="https://geometry-dash.fandom.com/wiki/Geometry_Dash_Wiki" target="_blank" class="btn btn-wiki">Browse Fandom</a>
+        </div>
+
+        <div class="card">
+            <h3>GDBrowser</h3>
+            <p>The best way to view online levels and profiles on the web.</p>
+            <a href="https://gdbrowser.com" target="_blank" class="btn">Open GDBrowser</a>
+        </div>
+      
+		<div class="card">
+            <h3>Icon Kit</h3>
+            <p>Preview & make icons on the web.</p>
+            <a href="https://gdbrowser.com/iconkit/" target="_blank" class="btn">Open Icon Kit</a>
+        </div>
+      <div class="card">
+            <h3>GD Save Explorer</h3>
+            <p>The best way to look at your stats on the web.</p>
+            <a href="https://gdcolon.com/gdsave/" target="_blank" class="btn">Open GD Save Explorer</a>
+        </div>
+      <div class="robtop">
+            <h3>RobTop Socials</h3>
+            <p>COMING SOON...</p>
+            <a href="https://sites.google.com/view/gd-error/error" target="_blank" class="btn">SOON...</a>
+        </div>
+      <div class="card">
+            <h3>GD Font Generator</h3>
+            <p>Generate text with ANY font you've seen in GD.</p>
+            <a href="https://gdcolon.com/gdfont" target="_blank" class="btn">Open GD Font Generator</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Explore cool websites based on Geometry Dash by RobTop.</p>
+    </footer>
+
+</body>
+</html>
